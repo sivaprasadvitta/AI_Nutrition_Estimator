@@ -11,7 +11,7 @@ export default function App() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('http://localhost:3000/api/nutrition', {
+      const res = await fetch('https://ai-nutrition-estimator.onrender.com/api/nutrition', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ dish :dishName })

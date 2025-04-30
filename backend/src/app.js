@@ -5,7 +5,7 @@ import apiRoutes from './routes/api.js';
 
 const app = express();
 app.use(express.json());
-app.use(cors('*'));
+app.use(cors({ origin: 'https://ai-nutrition-estimator.vercel.app' }));
 // app.options('*', cors());
 
 
