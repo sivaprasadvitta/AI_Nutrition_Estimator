@@ -1,13 +1,13 @@
 # AI Nutrition Estimator
 
-**Project Title:** VYB Nutrition Estimator
+**Project Title:** AI Nutrition Estimator
 
 ## Project Description
 
-VYB Nutrition Estimator is a MERN‑stack application that empowers users to estimate the nutritional content of home‑cooked Indian dishes per standard household serving. By leveraging a combination of:
+AI Nutrition Estimator is a MERN‑stack application that empowers users to estimate the nutritional content of home‑cooked Indian dishes per standard household serving. By leveraging a combination of:
 - A nutrition database (IFCT‑2017)
 - Standardized household measures
-- Fuzzy ingredient matching (Fuse.js)
+- Fuzzy ingredient matching
 - Optional LLM‑based recipe fetching (OpenAI)
 
 It delivers:
@@ -24,21 +24,6 @@ It delivers:
 **Challenges & Future Features:**
 - Parsing messy real‑world ingredient names and units
 - Scaling to regional recipe variations
-- Future: micronutrient support, user‑provided recipes, dietary preferences
-
----
-
-## _**IMPORTANT NOTE**_
-This project does not include MongoDB connection setup. Configure your DB connection based on environment:
-
-- **Local development:**
-  1. Copy `config/config.example.js` to `config/config.js`.
-  2. Export your `module.exports = { uri: '<your_local_mongo_uri>' }`.
-  3. This file is git‑ignored to keep credentials safe.
-
-- **Production (e.g., Heroku):**
-  1. Do **not** push `config.js`.
-  2. Set an environment variable named `DB_URI` in your host (see [Heroku Config Vars](https://devcenter.heroku.com/articles/config-vars)).
 
 ---
 
@@ -52,7 +37,6 @@ This project does not include MongoDB connection setup. Configure your DB connec
 7. [CLI Interface](#cli-interface)
 8. [Available Scripts](#available-scripts)
 9. [Integrating OpenAI API Using GitHub Free Access](#Integrating OpenAI API Using GitHub Free Access)
-10. 
 
 ---
 
@@ -68,7 +52,7 @@ This repository provides both the client and server for a MERN‑stack app. To b
 ## Project Structure
 
 ```
-vyb-nutrition-estimator/
+AI-nutrition-estimator/
 ├── backend/                 # Express API
 │   ├── config/              # DB config example (git‑ignored)
 │   ├── data/                # Nutrition CSV, household measures JSON
@@ -105,8 +89,6 @@ vyb-nutrition-estimator/
 ```bash
 cd backend
 npm install
-# Seed nutrition data from CSV
-npm run seed
 # Start dev server (with nodemon)
 npm run dev
 ```
@@ -137,7 +119,7 @@ npm run dev
 
 **Request Body:**
 ```json
-{ "dishName": "Your Dish Name" }
+{ "dish": "Your Dish Name" }
 ```
 
 **Response:**
@@ -198,7 +180,7 @@ Estimation for "Chole Bhature":
 
 In the root directory, run:
 
-### `npm run install-all`
+### `npm run install`
 Installs dependencies in both `/backend` and `/frontend`.
 
 ### `npm run dev`
@@ -231,5 +213,5 @@ This guide explains how to securely create an OpenAI API secret key using GitHub
 OPENAI_API_KEY=your_generated_api_key_here
 
 
-**Enjoy exploring nutrition with VYB!**
+**Enjoy exploring nutrition with AI!**
 
