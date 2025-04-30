@@ -34,9 +34,8 @@ It delivers:
 4. [Usage](#usage)
 5. [API Endpoint](#api-endpoint)
 6. [Input/Output Examples](#inputoutput-examples)
-7. [CLI Interface](#cli-interface)
-8. [Available Scripts](#available-scripts)
-9. [Integrating OpenAI API Using GitHub Free Access](#Integrating OpenAI API Using GitHub Free Access)
+7. [Available Scripts](#available-scripts)
+8. [Integrating OpenAI API Using GitHub Free Access](#Integrating OpenAI API Using GitHub Free Access)
 
 ---
 
@@ -109,7 +108,7 @@ npm run dev
 2. Enter a dish name (e.g., `Paneer Butter Masala`).
 3. Click **Estimate** to view per‑serving nutrition, dish type, and ingredients.
 
-![Frontend Screenshot](./frontend/screenshot.png)
+![Frontend Screenshot](./frontend/public/aiNutrionCal.png)
 
 ---
 
@@ -154,13 +153,6 @@ npm run dev
 | Masala Chai             | Hot Beverages  | 250ml (cup)       | 120      | 4       | 14    | 6   | 0     |
 
 ---
-
-## CLI Interface
-
-```bash
-cd backend
-npm run cli -- --dish "Chole Bhature"
-```
 
 **Sample Output:**
 ```
